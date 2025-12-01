@@ -3,7 +3,7 @@
 }
 
 .navMenu {
-  border: 3px solid transparent;
-  background: linear-gradient(#00000a 0 0) padding-box, linear-gradient(to right, var(--primary-color), var(--secondary-color)) border-box;
+  border: 1px solid transparent;
+  background: linear-gradient(#232335 0 0) padding-box, linear-gradient(to right, var(--primary-color), var(--secondary-color)) border-box;
   padding: 0.6rem 1rem;
 }/*# sourceMappingURL=style.css.map */
