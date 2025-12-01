@@ -1,9 +1,6 @@
 .navMenu{
     border: 3px solid transparent;
-    background: linear-gradient(var(--secondary-color), var(--primary-color)) padding-box,
+    background: linear-gradient(#00000a 0 0) padding-box,
                 linear-gradient(to right, var(--primary-color), var(--secondary-color)) border-box;
-    padding: 0.6rem 0.5rem;
-    background-clip: padding-box, border-box;
-    background-color: transparent;
-    
+    padding: 0.6rem 1rem;    
 }
