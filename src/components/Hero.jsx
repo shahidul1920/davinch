@@ -5,7 +5,7 @@ const Hero = () => {
     const brandName = 'text-xl font-bold text-gray-200 opacity-60'
     return (
         <div className='bg-[var(--dark)] py-12'>
-            <main className='heroSection container mx-auto text-white grid grid-cols-6 bg-[#3c4141] border border-[#3c4141] gap-[1px] grid-rows-6'>
+            <main className='heroSection container mx-auto text-white grid grid-cols-6 bg-[#3c4141] border border-b-0 border-[#3c4141] gap-[1px] grid-rows-6'>
                 <div className={`boxes ${boxesBase}`}></div>
                 <div className={`boxes ${boxesBase}`}></div>
                 <div className={`boxes ${boxesBase}`}></div>
@@ -38,7 +38,7 @@ const Hero = () => {
                 <div className={`boxes ${boxesBase}`}></div>
             </main>
             <div className="brandSection border border-[#3c4141] border-[0.4px] border-x-0 p-6 text-white text-center">
-                <div className="container mx-auto flex justify-between">
+                <div className="container mx-auto flex flex-wrap justify-between">
                     <div>
                         <h1 className={brandName}>IPSaustralia</h1>
                     </div>
