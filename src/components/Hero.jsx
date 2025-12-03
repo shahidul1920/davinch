@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '../UIs/Button'
 
 const Hero = () => {
     const boxesBase = 'h-[80px] bg-[var(--dark)]'
@@ -17,7 +18,8 @@ const Hero = () => {
                     <img className='absolute -top-[15px] -right-[15px]' src="./star.svg" alt="" />
                     <h1 className='text-5xl font-bold mb-6'>Welcome to Davinch</h1>
                     <p className='text-lg mb-4'>Your gateway to innovative solutions and cutting-edge technology. Explore our services and discover how we can help you achieve your goals.</p>
-                    <button className='px-6 py-3 flex gap-1 items-center bg-[var(--primary-color)] text-white font-semibold rounded-full hover:bg-[var(--secondary-color)] transition'>Get Started <img className='w-[20px] h-auto' src="./star.svg" alt="" /></button>
+
+                    <Button>Learn More</Button>
                 </div>
                 <div className={`boxes ${boxesBase}`}></div>
                 <div className={`boxes ${boxesBase}`}></div>
