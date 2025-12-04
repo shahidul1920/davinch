@@ -3,6 +3,7 @@
   background: linear-gradient(#232335 0 0) padding-box, linear-gradient(to right, var(--primary-color), var(--secondary-color)) border-box;
   padding: 0.6rem 1rem;
   color: var(--light);
+  transition: all 0.3s ease;
 }
 
 .navMenu {
