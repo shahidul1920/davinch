@@ -1,21 +1,22 @@
 import React from 'react'
+import Button from '../UIs/Button';
 
 const WorkProcess = () => {
 
     const steps = [
         {
             number: "1",
-            title: "Product design Research",
+            title: "Step 1: Product design Research",
             desc: "This initial step involves a systematic and thorough exploration of the market landscape."
         },
         {
             number: "2",
-            title: "UI design in figma",
-            desc: "We focus on creating a user interface that is intuitive, efficient, and enjoyable to use."
+            title: "Step 2: UI design in figma",
+            desc: "We focus on creating a user interface that is intuitive efficient, and enjoyable to use."
         },
         {
             number: "3",
-            title: "No-code develop in webflow",
+            title: "Step 3: No-code develop in webflow",
             desc: "Bringing the design to life using Webflow development for pixel-perfect implementation."
         }
     ];
@@ -24,50 +25,27 @@ const WorkProcess = () => {
     return (
         <div className='bg-[var(--dark)] py-18 text-white'>
             <div className="container mx-auto">
-                <div className="heading flex gap-2 items-center justify-center">
-                    <h2 className='text-[40px] font-regular text-center'>Our Work Process</h2>
+                <div className="heading flex gap-2 items-center">
+                    <h2 className='text-[40px] font-regular text-left'>Our Work Process</h2>
                     <img className='w-[30px]' src="./star3.svg" alt="" />
                 </div>
             </div>
 
-
-
-            <div className="border-l border-white/20 ml-6 space-y-0">
-
-                {steps.map((step, index) => (
-                    <div key={index} className="relative pl-10 pb-16 last:pb-0">
-
-                        {/* THE CIRCLE NUMBER */}
-                        {/* absolute positioning with -left ensures it centers on the border line */}
-                        <div className="absolute -left-6 top-0 flex h-12 w-12 items-center justify-center rounded-full border border-white bg-black font-semibold">
-                            {step.number}
+            <div className="container mx-auto grid gap-8 mt-[1rem] md:mt-[4rem]">
+                {steps.map((step, i) => (
+                    <div key={i} className='flex w-full'>
+                        <div className="left w-[80px] flex flex-col items-center text-center justify-center gap-2">
+                            <div className="number text-[22px] grid place-content-center font-regular text-[var(--primary)] border border-white rounded-full min-w-[40px] min-h-[40px]">{step.number}</div>
+                            <div className="line w-[1.4px] h-full bg-[#3c4141]" />
                         </div>
-
-                        {/* THE CONTENT */}
-                        <div>
-                            {/* Optional: The gradient icon placeholder */}
-                            <div className="mb-4 h-10 w-10 rounded-full bg-gradient-to-tr from-orange-300 to-indigo-500 opacity-80 blur-[1px]"></div>
-
-                            <h3 className="text-xl font-medium mb-2">{step.title}</h3>
-                            <p className="text-gray-400 max-w-md leading-relaxed">
-                                {step.desc}
-                            </p>
-
-                            {/* Example Button for the first item */}
-                            {index === 0 && (
-                                <button className="mt-6 rounded-full border border-gray-600 px-6 py-2 text-sm hover:bg-white hover:text-black transition">
-                                    See Examples
-                                </button>
-                            )}
+                        <div className="right grid gap-4">
+                            <h3 className='text-[22px] font-regular'>{step.title}</h3>
+                            <p className='text-[19px] max-w-[580px] font-thin text-[var(--lightGray)]'>{step.desc}</p>
+                            <Button className="mt-4">Learn More</Button>
                         </div>
                     </div>
                 ))}
-
             </div>
-
-
-
-
 
 
         </div>

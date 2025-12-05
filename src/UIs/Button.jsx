@@ -16,7 +16,7 @@ const Button = (params) => {
   })
 
   return (
-    <div ref={containerRef} className='relative rounded-full bg-gray-500'>
+    <div ref={containerRef} className='relative'>
       <button onMouseEnter={hoverHandler} onMouseLeave={hoverLeave} className="btn overflow-hiddenaa px-4 py-2 rounded-full text-[16px] flex gap-1 items-center cursor-pointer">
         {params.children}
         {/* <img ref={starref} className='w-[20px] h-auto star' src="./star.svg" alt="" /> */}
