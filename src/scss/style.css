@@ -1,24 +1,5 @@
 .btn {
-  border: 1px solid transparent;
-  background: linear-gradient(#232335 0 0) padding-box, linear-gradient(to right, var(--primary-color), var(--secondary-color)) border-box;
-  padding: 0.6rem 1rem;
-  color: var(--light);
-  color: black;
-  transition: all 0.3s ease;
-  position: relative;
-}
-.btn::after {
-  content: "";
-  position: absolute;
-  top: -80px;
-  left: 0;
-  width: 200px;
-  height: 100px;
-  border-radius: 9999px;
-  background: white;
-  opacity: 1;
-  transition: all 0.3s ease;
-  z-index: -1;
+  background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
 }
 
 .navMenu {
