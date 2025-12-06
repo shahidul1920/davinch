@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '../UIs/Button';
+import Heading from '../UIs/Heading';
 
 const WorkProcess = () => {
 
@@ -27,12 +28,7 @@ const WorkProcess = () => {
 
     return (
         <div className='bg-[var(--dark)] py-18 text-white'>
-            <div className="container mx-auto">
-                <div className="heading flex gap-2 items-center">
-                    <h2 className='text-[40px] font-regular text-left'>Our Work Process</h2>
-                    <img className='w-[30px]' src="./star3.svg" alt="" />
-                </div>
-            </div>
+            <Heading>Our Work Process</Heading>
 
             <div className="container mx-auto grid gap-6 mt-[1rem] md:mt-[4rem]">
                 {steps.map((step, i) => (
