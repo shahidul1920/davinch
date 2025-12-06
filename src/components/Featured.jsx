@@ -1,5 +1,11 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import gsap from 'gsap';
 import Heading from '../UIs/Heading'
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Featured = () => {
     const featuredProjects = [
@@ -22,6 +28,51 @@ const Featured = () => {
             imageUrl: "./prj.png"
         }
     ]
+
+    const projaf = useRef(null);
+    
+    useGSAP(()=>{  
+        const cards = gsap.utils.toArray('.card', projaf.current);
+              
+        cards.forEach((card, index)=>{
+            // if(index < cards.length - 1) { // Don't pin the last card
+            //     gsap.timeline({
+            //         scrollTrigger:{
+            //             trigger: card,
+            //             start: "top top",
+            //             scrub: 1,
+            //             pin: true,
+            //             //end: () => `+=${card.offsetHeight}`,
+            //         }
+            //     })
+            //     .to(card,{
+            //         ease: "none",
+            //         startAt:{filter: 'brightness(100%) blur(0px)'},
+            //         scale: 0.9,
+            //         filter: 'brightness(50%) blur(5px)',
+            //         duration: 1
+            //     }, '<')
+            // }
+            gsap.timeline({
+                    scrollTrigger:{
+                        trigger: card,
+                        start: "top top",
+                        scrub: 1,
+                        pin: true,
+                        //end: () => `+=${card.offsetHeight}`,
+                    }
+                })
+                .to(card,{
+                    ease: "none",
+                    startAt:{filter: 'brightness(100%) blur(0px)'},
+                    filter: 'brightness(50%) blur(1px)',
+                    scale: 0.99,
+                    duration: 1
+                }, '<')
+        })
+    }, {scope: projaf})
+
+
   return (
     <div className='py-28 bg-[var(--dark)]'>
         <div className='mb-[80px]'>
@@ -29,7 +80,7 @@ const Featured = () => {
         </div>
         {/* projects cards */}
 
-        <div className="container mx-auto cardsSec flex flex-col justify-center items-center gap-20">
+        <div ref={projaf} className="container mx-auto cardsSec flex flex-col justify-center items-center gap-20">
             {featuredProjects.map((project, i) =>(
                 <div key={i} className="card w-full flex gap-8 py-[55px] px-[95px] bg-[#151515]">
                     <div className="imageSec">
