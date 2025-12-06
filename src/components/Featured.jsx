@@ -65,7 +65,7 @@ const Featured = () => {
                 .to(card,{
                     ease: "none",
                     startAt:{filter: 'brightness(100%) blur(0px)'},
-                    filter: 'brightness(50%) blur(1px)',
+                    filter: 'brightness(50%) blur(2px)',
                     scale: 0.99,
                     duration: 1
                 }, '<')
