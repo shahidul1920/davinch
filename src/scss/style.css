@@ -9,6 +9,5 @@
 }
 
 .testimonialBorderBg {
-  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-  padding: 0.4rem;
+  background: linear-gradient(to left, rgba(88, 102, 223, 0.3490196078), var(--secondary-color));
 }/*# sourceMappingURL=style.css.map */

@@ -37,13 +37,13 @@ const Testimonials = () => {
         <div className="bg-[var(--dark)] py-28 text-white">
             <section className="container mx-auto">
                 <Heading>What our clients say</Heading>
-                <div className='grid gap-12 grid-cols-2 mt-16'>
+                <div className='grid gap-12 grid-cols-1 xl:grid-cols-2 mt-16'>
                     {testimonials.map((testimonial)=>(
-                        <div key={testimonial.id} className='rounded-4xl pt-1 pl-1 testimonialBorderBg'>
-                            <div className='bg-[var(--dark)] p-8 rounded-4xl'>
+                        <div key={testimonial.id} className='rounded-4xl pt-[1px] pl-[1px] testimonialBorderBg'>
+                            <div className='bg-[var(--dark)] p-8 rounded-4xl h-full'>
                                 <div className="images flex items-center justify-between">
                                     <div className="profile flex items-center gap-4">
-                                        <img className='w-[80px] h-[80px] rounded-full object-cover border-2 border-amber-50' src={testimonial.image} alt={testimonial.name} />
+                                        <img className='w-[80px] h-[80px] rounded-full object-cover border-1 border-amber-50' src={testimonial.image} alt={testimonial.name} />
                                         <div className="names">
                                             <h4 className='text-[18px] font-semibold'>{testimonial.name}</h4>
                                             <p className='text-[14px]'>{testimonial.position}</p>
