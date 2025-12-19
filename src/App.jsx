@@ -11,8 +11,9 @@ const App = () => {
     <div>
       <Header />
       <Hero />
-      <WorkProcess />
       <Featured />
+      <div className="w-full bg-[var(--dark)] h-[600px]"></div>
+      <WorkProcess />
       <Testimonials />
     </div>
   )

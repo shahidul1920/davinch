@@ -39,7 +39,7 @@ const Testimonials = () => {
                 <Heading>What our clients say</Heading>
                 <div className='grid gap-12 grid-cols-2 mt-16'>
                     {testimonials.map((testimonial)=>(
-                        <div key={testimonial.id} className='rounded-4xl pt-1 pl-1 bg-amber-50'>
+                        <div key={testimonial.id} className='rounded-4xl pt-1 pl-1 testimonialBorderBg'>
                             <div className='bg-[var(--dark)] p-8 rounded-4xl'>
                                 <div className="images flex items-center justify-between">
                                     <div className="profile flex items-center gap-4">
