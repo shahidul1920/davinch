@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import WorkProcess from './components/WorkProcess'
 import Featured from './components/Featured'
 import Testimonials from './components/Testimonials'
+import CTA from './components/CTA'
 
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
       <div className="w-full bg-[var(--dark)] h-[600px]"></div>
       <WorkProcess />
       <Testimonials />
+      <CTA />
     </div>
   )
 }
