@@ -1,3 +1,4 @@
+import { ChevronDown } from 'lucide-react'
 import React from 'react'
 
 const Header = () => {
@@ -13,7 +14,7 @@ const Header = () => {
                 <nav className='navMenu rounded-full'>
                     <ul className="md:flex space-x-10 hidden">
                         <li><a href="#home" className="text-[16px]">Home</a></li>
-                        <li><a href="#services" className="text-[16px]">Services</a></li>
+                        <li><a href="#services" className="text-[16px] flex items-center gap-2">Services<ChevronDown size={18} /></a></li>
                         <li><a href="#deals" className="text-[16px]">Deals</a></li>
                         <li><a href="#about" className="text-[16px]">About</a></li>
                     </ul>
