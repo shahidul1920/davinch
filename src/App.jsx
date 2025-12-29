@@ -5,6 +5,7 @@ import WorkProcess from './components/WorkProcess'
 import Featured from './components/Featured'
 import Testimonials from './components/Testimonials'
 import CTA from './components/CTA'
+import Footer from './components/Footer'
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
       <WorkProcess />
       <Testimonials />
       <CTA />
+      <Footer />
     </div>
   )
 }
