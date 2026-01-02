@@ -3,7 +3,7 @@ import Button from '../UIs/Button'
 
 const CTA = () => {
     return (
-        <div className='bg-[var(--dark)] '>
+        <div className='bg-[var(--dark)] p-6 xl:p-0'>
             <div className='flex container mx-auto py-15 justify-between items-center gap-10'>
 
                 <div className="">
@@ -20,7 +20,7 @@ const CTA = () => {
                     </div>
                 </div>
 
-                <div className=''>
+                <div className='hidden md:block'>
                     <svg width="393" height="393" viewBox="0 0 393 393" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line x1="354.5" y1="392.021" x2="354.5" y2="9.15527e-05" stroke="#404040" />
                         <line x1="274.5" y1="392.021" x2="274.5" y2="9.15527e-05" stroke="#404040" />

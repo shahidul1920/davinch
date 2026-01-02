@@ -27,7 +27,7 @@ const WorkProcess = () => {
 
 
     return (
-        <div className='bg-[var(--dark)] py-18 text-white'>
+        <div className='bg-[var(--dark)] p-6 md:p-0 py-18 text-white'>
             <Heading>Our Work Process</Heading>
 
             <div className="container mx-auto grid gap-6 mt-[1rem] md:mt-[4rem]">

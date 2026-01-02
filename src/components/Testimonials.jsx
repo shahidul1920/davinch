@@ -34,7 +34,7 @@ const Testimonials = () => {
     ]
   return (
     <div>
-        <div className="bg-[var(--dark)] py-28 text-white">
+        <div className="bg-[var(--dark)] px-6 md:px-0 py-28 text-white">
             <section className="container mx-auto">
                 <Heading>What our clients say</Heading>
                 <div className='grid gap-12 grid-cols-1 xl:grid-cols-2 mt-16'>

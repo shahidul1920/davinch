@@ -67,14 +67,15 @@ const Featured = () => {
                     startAt:{filter: 'brightness(100%) blur(0px)'},
                     filter: 'brightness(50%) blur(2px)',
                     scale: 0.99,
-                    duration: 1
+                    duration: 1,
+                    opacity:0.4,
                 }, '<')
         })
     }, {scope: projaf})
 
 
   return (
-    <div className='py-28 bg-[var(--dark)]'>
+    <div className='py-10 px-6 md:px-0 bg-[var(--dark)]'>
         <div className='mb-[80px]'>
             <Heading>Some Featured projects</Heading>
         </div>
@@ -82,7 +83,7 @@ const Featured = () => {
 
         <div ref={projaf} className="container mx-auto cardsSec flex flex-col justify-center items-center gap-20">
             {featuredProjects.map((project, i) =>(
-                <div key={i} className="card w-full flex gap-8 py-[55px] px-[95px] bg-[#151515]">
+                <div key={i} className="card w-full flex flex-wrap md:flex-nowrap gap-8 py-[55px] px-[35px] md:px-[60px] xl:px-[95px] bg-[#151515]">
                     <div className="imageSec">
                         <img className='w-[545px] h-auto object-cover' src={project.imageUrl} alt={project?.title} />
                     </div>
