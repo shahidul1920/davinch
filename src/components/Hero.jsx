@@ -3,11 +3,11 @@ import Button from '../UIs/Button'
 
 const Hero = () => {
     //const boxesBase = 'h-[80px] bg-[var(--dark)]'
-    const boxesBase = 'h-[80px] bg-[var(--dark)]'
+    const boxesBase = 'h-[80px] bg-[var(--dark)] bg-blend-screen'
     const brandName = 'text-xl font-bold text-gray-200 opacity-60'
     return (
-        <div className='py-12 overflow-x-hidden relative'>
-            <img className='absolute inset-0 -z-1' src="./hero_da_vin.avif" alt="" />
+        <div className='bg-[var(--dark)] py-12 overflow-x-hidden relative'>
+            <img className='absolute inset-0 z-1 mix-blend-screen opacity-70' src="./hero_da_vin.avif" alt="" />
             <main className='heroSection container mx-auto text-white grid grid-cols-6 bg-[#3c4141] border border-b-0 border-[#3c4141] gap-[1px] grid-rows-6'>
                 <div className={`boxes ${boxesBase}`}></div>
                 <div className={`boxes ${boxesBase}`}></div>
@@ -21,7 +21,9 @@ const Hero = () => {
                     <h1 className='text-3xl md:text-4xl xl:text-5xl font-bold mb-3 md:mb-4 xl:mb-6'>Welcome to Davinch</h1>
                     <p className='text-[12px] xl:text-lg mb-4'>Your gateway to innovative solutions and cutting-edge technology. Explore our services and discover how we can help you achieve your goals.</p>
 
-                    <Button>Learn More</Button>
+                    <div className='z-10'>
+                        <Button>Learn More</Button>
+                    </div>
                 </div>
                 <div className={`boxes ${boxesBase}`}></div>
                 <div className={`boxes ${boxesBase}`}></div>
