@@ -66,9 +66,9 @@ const Featured = () => {
                     ease: "none",
                     startAt:{filter: 'brightness(100%) blur(0px)'},
                     filter: 'brightness(50%) blur(2px)',
-                    scale: 0.99,
+                    scale: 0.97,
                     duration: 1,
-                    opacity:0.4,
+                    opacity:0.7,
                 }, '<')
         })
     }, {scope: projaf})
