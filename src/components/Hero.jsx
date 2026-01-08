@@ -18,7 +18,7 @@ const Hero = () => {
                 <div className={`boxes ${boxesBase}`}></div>
                 <div className={`boxes ${boxesBase} h-full col-span-4 row-span-5 text-center flex flex-col justify-center items-center p-2 md:p-6 relative`}>
                     <img className='absolute -top-[15px] -right-[15px]' src="./star.svg" alt="" />
-                    <h1 className='text-3xl md:text-4xl xl:text-5xl font-bold mb-3 md:mb-4 xl:mb-6'>Welcome to Davinch</h1>
+                    <h1 className='text-3xl md:text-4xl xl:text-5xl font-bold mb-3 md:mb-4 xl:mb-6 headingFont'>Welcome to Davinch</h1>
                     <p className='text-[12px] xl:text-lg mb-4'>Your gateway to innovative solutions and cutting-edge technology. Explore our services and discover how we can help you achieve your goals.</p>
 
                     <div className='z-10'>
