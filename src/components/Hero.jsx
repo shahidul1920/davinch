@@ -6,8 +6,8 @@ const Hero = () => {
     const boxesBase = 'h-[80px] bg-[var(--dark)] bg-blend-screen'
     const brandName = 'text-xl font-bold text-gray-200 opacity-60'
     return (
-        <div className='bg-[var(--dark)] py-12 overflow-x-hidden relative'>
-            <img className='absolute inset-0 z-1 mix-blend-screen opacity-70' src="./hero_da_vin.avif" alt="" />
+        <div className='bg-[var(--dark)] py-12 overflow-x-hidden relative overflow-hidden'>
+            <img className='absolute inset-0 z-1 mix-blend-screen blur-xl pointer-events-none' src="./hero_da_vin.avif" alt="" />
             <main className='heroSection container mx-auto text-white grid grid-cols-6 bg-[#3c4141] border border-b-0 border-[#3c4141] gap-[1px] grid-rows-6'>
                 <div className={`boxes ${boxesBase}`}></div>
                 <div className={`boxes ${boxesBase}`}></div>

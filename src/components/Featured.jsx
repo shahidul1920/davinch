@@ -64,7 +64,7 @@ const Featured = () => {
                 })
                 .to(card,{
                     ease: "none",
-                    startAt:{filter: 'brightness(100%) blur(0px)'},
+                    startAt:{filter: 'brightness(100%) blur(2px)'},
                     filter: 'brightness(50%) blur(2px)',
                     scale: 0.97,
                     duration: 1,
@@ -76,7 +76,7 @@ const Featured = () => {
 
   return (
     <div className='py-10 px-6 md:px-0 bg-[var(--dark)]'>
-        <div className='mb-[80px]'>
+        <div className='mb-[30px]'>
             <Heading>Some Featured projects</Heading>
         </div>
         {/* projects cards */}
