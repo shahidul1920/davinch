@@ -6,7 +6,6 @@ export const Boring = () => {
   useGSAP(()=>{
     const uiImagesL = gsap.utils.toArray('.uiImgs .imgL');
     const uiImagesR = gsap.utils.toArray('.uiImgs .imgR');
-    const headingsAni = document.querySelector('.headAniSec h2');
     gsap.set(uiImagesL[0], {
       x: 400,
       y: -150,
