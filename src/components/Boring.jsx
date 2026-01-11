@@ -6,6 +6,7 @@ export const Boring = () => {
   useGSAP(()=>{
     const uiImagesL = gsap.utils.toArray('.uiImgs .imgL');
     const uiImagesR = gsap.utils.toArray('.uiImgs .imgR');
+    const headingsAni = document.querySelector('.headAniSec h2');
     gsap.set(uiImagesL[0], {
       x: 400,
       y: -150,
@@ -14,38 +15,57 @@ export const Boring = () => {
     gsap.set(uiImagesL[1], {
       x: 380,
       y: -120,
-      rotation: 15
+      rotation: 12
     })
     gsap.set(uiImagesL, {
       scale: 0.9
     })
-    gsap.set(uiImagesR, {x: 0});
+    gsap.set(uiImagesR, {
+      scale: 0.9
+    })
+    gsap.set(uiImagesR[0], {
+      x: 1050,
+      y: -250,
+      rotation: 15
+    });
+    gsap.set(uiImagesR[1], {
+      x: 980,
+      y: -220,
+      rotation: -12
+    })
+    gsap.set('.headAniSec h2', {
+      opacity: 0.4
+    })
     gsap.timeline({
       scrollTrigger:{
-        trigger: '.uiImgs',
+        trigger: '.headAniSec',
         start: 'top 60%',
         end: 'bottom 20%',
         scrub: 1,
         markers: true
       }
     })
+    .to('.headAniSec h2',{
+      opacity: 1,
+      stagger: 0.3,
+    })
     .to(uiImagesL,{
       x: "-=100",
       stagger: 0.2,
       ease: 'none',
       duration: 1
-    })
+    }, '<')
     .to(uiImagesR,{
-      x: '-=200',
+      x: '+=100',
       stagger: 0.2,
       ease: 'none',
       duration: 1
-    })
+    }, '<')
   })
 
   return (
     <div>
-        <div className="container mx-auto py-20 px-6 md:px-0 relative">
+        <div className="container headAniSec mx-auto py-20 px-6 md:px-0 relative">
             <div className="text-center text-white text-3xl uppercase font-semibold headingFont">
                 <h2>tired of boring websites that</h2>
                 <h2>fail to engage and inspire?</h2>
