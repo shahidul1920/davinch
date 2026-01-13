@@ -63,7 +63,7 @@ export const Boring = () => {
   })
 
   return (
-    <div>
+    <div className='bg-[var(--dark)]'>
         <div className="container headAniSec mx-auto py-20 px-6 md:px-0 relative">
             <div className="text-center text-white text-3xl uppercase font-semibold headingFont">
                 <h2>tired of boring websites that</h2>
