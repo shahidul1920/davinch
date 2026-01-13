@@ -27,10 +27,10 @@ const WorkProcess = () => {
 
 
     return (
-        <div className='bg-[var(--dark)] p-6 md:p-0 py-18 text-white'>
+        <div className='bg-[var(--dark)] p-6 py-18 text-white'>
             <Heading>Our Work Process</Heading>
 
-            <div className="container mx-auto grid gap-6 mt-[1rem] md:mt-[4rem]">
+            <div className="container mx-auto grid gap-4 mt-5 md:mt-10">
                 {steps.map((step, i) => (
                     <div key={i} className='flex w-full gap-7'>
                         <div className="left w-[80px] flex flex-col items-center text-center justify-center gap-2">
