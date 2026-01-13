@@ -41,7 +41,7 @@ export const Boring = () => {
         start: 'top 60%',
         end: 'bottom 20%',
         scrub: 1,
-        markers: true
+        //markers: true
       }
     })
     .to('.headAniSec h2',{
