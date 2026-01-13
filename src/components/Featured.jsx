@@ -64,11 +64,11 @@ const Featured = () => {
                 })
                 .to(card,{
                     ease: "none",
-                    startAt:{filter: 'brightness(100%) blur(2px)'},
+                    startAt:{filter: 'brightness(100%)'},
                     filter: 'brightness(50%) blur(2px)',
                     scale: 0.97,
                     duration: 1,
-                    opacity:0.7,
+                    opacity:0.9,
                 }, '<')
         })
     }, {scope: projaf})

@@ -11,9 +11,10 @@ export const Home = () => {
         <>
             <Hero />
             <Boring />
+            <WorkProcess />
             <Featured />
             <div className="w-full bg-[var(--dark)] h-[600px]"></div>
-            <WorkProcess />
+            
             <Testimonials />
             <CTA />
         </>
