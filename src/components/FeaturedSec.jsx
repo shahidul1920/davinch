@@ -1,3 +1,4 @@
+import { MoveRight } from 'lucide-react'
 import React from 'react'
 
 export const FeaturedSec = () => {
@@ -29,20 +30,25 @@ export const FeaturedSec = () => {
     ]
     return (
         <div className='bg-[var(--dark)]'>
-            <div className="title container mx-auto py-20 text-center text-[var(--light)]">
+            <div className="title container mx-auto pt-20 pb-6 text-center text-[var(--light)]">
                 <span className='headingFont'>Our work</span>
                 <h2 className='text-[40px] font-bold headingFont'>
                     Some of our<br />
                     featured projects
                 </h2>
             </div>
-            <div className='container mx-auto grid grid-cols-1 md:grid-cols-2'>
-                {featuredProjects.map((proj, i)=>(
+            <div className='container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8'>
+                {featuredProjects.map((proj, i) => (
                     <div key={i} className="imageCard overflow-hidden">
-                        <img src={proj.imageUrl} alt={proj.title} className='w-full h-[300px] object-fill'/>
+                        <div className="imgs w-full h-[300px]">
+                            <img src={proj.imageUrl} alt={proj.title} className='w-full h-full object-fill' />
+                        </div>
                         <div className="texts text-[var(--light)]">
                             <h3 className='text-[24px] font-bold text-[var(--light)] headingFont my-4'>{proj.title}</h3>
                             <p className='text-[16px] text-[var(--lightShade)] leading-[1.6]'>{proj.description}</p>
+                            <div className="exploreSite mt-4">
+                                <a className='text-[var(--primary-color)] underline flex items-center gap-2' href="#">Explore Site <MoveRight /></a>
+                            </div>
                         </div>
                     </div>
                 ))}
