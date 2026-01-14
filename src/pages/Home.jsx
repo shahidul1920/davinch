@@ -6,6 +6,7 @@ import Testimonials from '../components/Testimonials'
 import CTA from '../components/CTA'
 import { Boring } from '../components/Boring'
 import VideoTestimonial from '../components/VideoTestimonial'
+import { FeaturedSec } from '../components/FeaturedSec'
 
 export const Home = () => {
     return (
@@ -13,6 +14,7 @@ export const Home = () => {
             <Hero />
             <Boring />
             <VideoTestimonial />
+            <FeaturedSec />
             <WorkProcess />
             <Featured />
             <div className="w-full bg-[var(--dark)] h-[600px]"></div>
