@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { MoveRight } from 'lucide-react'
 import { useRef } from 'react'
 
-gsap.registerPlugin(ScrollTrigger)
+//gsap.registerPlugin(ScrollTrigger)
 
 export const FeaturedSec = () => {
     const featuredProjects = [
@@ -48,7 +48,8 @@ export const FeaturedSec = () => {
                 trigger: element,
                 start: "top 60%",
                 end: "bottom 30%",
-                markers: true
+                markers: true,
+                toggleActions: "play none none reverse",
             }
         })
         
