@@ -1,5 +1,9 @@
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 import { MoveRight } from 'lucide-react'
-import React from 'react'
+import { useRef } from 'react'
+
+gsap.registerPlugin(ScrollTrigger)
 
 export const FeaturedSec = () => {
     const featuredProjects = [
@@ -28,8 +32,30 @@ export const FeaturedSec = () => {
             imageUrl: "./prj.png"
         }
     ]
+
+    const featureRef = useRef(null);
+    useGSAP(()=>{
+        const element = featureRef.current;
+        gsap.set(element,{
+            opacity:0,
+            y:120
+        })
+        gsap.to(element,{
+            opacity:1,
+            y:0,
+            duration:1,
+            scrollTrigger:{
+                trigger: element,
+                start: "top 60%",
+                end: "bottom 30%",
+                markers: true
+            }
+        })
+        
+    }, {scope: featureRef})
+
     return (
-        <div className='bg-[var(--dark)]'>
+        <div ref={featureRef} className='bg-[var(--dark)]'>
             <div className="title container mx-auto pt-20 pb-6 text-center text-[var(--light)]">
                 <span className='headingFont'>Our work</span>
                 <h2 className='text-[40px] font-bold headingFont'>
