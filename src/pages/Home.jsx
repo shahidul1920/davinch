@@ -8,6 +8,7 @@ import { Boring } from '../components/Boring'
 import VideoTestimonial from '../components/VideoTestimonial'
 import { FeaturedSec } from '../components/FeaturedSec'
 
+
 export const Home = () => {
     return (
         <>
