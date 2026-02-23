@@ -36,6 +36,24 @@ export const FeaturedSec = () => {
     const featureRef = useRef(null);
     useGSAP(()=>{
         const element = featureRef.current;
+        const cards = gsap.utils.toArray('.imageCard', element);
+        cards.forEach(card => {
+            gsap.set(card,{
+                opacity:0,
+                y:120
+            })
+            gsap.to(card, {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                stagger: 1,
+                scrollTrigger:{
+                    trigger: card,
+                    start: "top 80%",
+                    end: "bottom 30%",
+                }
+            })
+        })
         gsap.set(element,{
             opacity:0,
             y:120
