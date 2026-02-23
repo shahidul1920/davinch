@@ -42,18 +42,18 @@ export const FeaturedSec = () => {
                 opacity:0,
                 y:120
             })
-            gsap.to(card, {
+        })
+        gsap.to(cards, {
                 opacity: 1,
                 y: 0,
                 duration: 1,
                 stagger: 1,
                 scrollTrigger:{
-                    trigger: card,
+                    trigger: element,
                     start: "top 80%",
                     end: "bottom 30%",
                 }
             })
-        })
         gsap.set(element,{
             opacity:0,
             y:120
